@@ -9,7 +9,7 @@
     <!-- CSS -->
     <link rel="stylesheet" href="css/Index.css">
 
-    <title>Instagramtestee</title>
+    <title>Instagram</title>
 </head>
 <body>
     <header>
@@ -170,7 +170,7 @@
                     </div>
                 </div>
 
-                <div class="Post-img">
+                <div class="Post-img" onclick="Like(document.getElementById('L1'), document.getElementById('HL1'))">
                     <img src="images/Posts/gato-telefone.svg" alt="Imagem de post">
                 </div>
 
@@ -178,12 +178,13 @@
                     <div>
                         <div class="Like-interaction">
                             <ion-icon id="L1" name="heart-outline" onclick="Like(document.getElementById('L1'), document.getElementById('HL1'))"></ion-icon>
-                            <div id="HL1" class="Liked Off" onclick="Like(document.getElementById('L1'), document.getElementById('HL1'))"></div>
+                            <ion-icon onclick="Like(document.getElementById('L1'), document.getElementById('HL1'))" id="HL1" class="Off" name="heart"></ion-icon>
                         </div>
                         <ion-icon class="Chat-icon" name="chatbubble-outline"></ion-icon>
                         <ion-icon name="paper-plane-outline"></ion-icon>
                     </div>
-                    <ion-icon name="bookmark-outline"></ion-icon>
+                    <ion-icon onclick="savePost(document.getElementById('nonSaved1'), document.getElementById('saved1'))" name="bookmark-outline" id="nonSaved1"></ion-icon>
+                    <ion-icon onclick="savePost(document.getElementById('nonSaved1'), document.getElementById('saved1'))" name="bookmark" id="saved1" class="Off"></ion-icon>
                 </div>
 
                 <div class="Post-informations">
@@ -244,7 +245,7 @@
                     </div>
                 </div>
 
-                <div class="Post-img">
+                <div class="Post-img" onclick="Like(document.getElementById('L2'), document.getElementById('HL2'))">
                     <img src="images/Posts/dog.svg" alt="Imagem de post">
                 </div>
 
@@ -252,12 +253,13 @@
                     <div>
                         <div class="Like-interaction">
                             <ion-icon id="L2" name="heart-outline" onclick="Like(document.getElementById('L2'), document.getElementById('HL2'))"></ion-icon>
-                            <div id="HL2" class="Liked Off" onclick="Like(document.getElementById('L2'), document.getElementById('HL2'))"></div>
+                            <ion-icon onclick="Like(document.getElementById('L2'), document.getElementById('HL2'))" id="HL2" class="Off" name="heart"></ion-icon>
                         </div>
                         <ion-icon class="Chat-icon" name="chatbubble-outline"></ion-icon>
                         <ion-icon name="paper-plane-outline"></ion-icon>
                     </div>
-                    <ion-icon name="bookmark-outline"></ion-icon>
+                    <ion-icon onclick="savePost(document.getElementById('nonSaved2'), document.getElementById('saved2'))" name="bookmark-outline" id="nonSaved2"></ion-icon>
+                    <ion-icon onclick="savePost(document.getElementById('nonSaved2'), document.getElementById('saved2'))" name="bookmark" id="saved2" class="Off"></ion-icon>
                 </div>
 
                 <div class="Post-informations">
@@ -311,7 +313,7 @@
                     </div>
                 </div>
 
-                <div class="Post-img">
+                <div class="Post-img" onclick="Like(document.getElementById('L3'), document.getElementById('HL3'))">
                     <img src="https://cdn1.mundodastribos.com/458820-Fotos-de-cachorros-fantasiados-11.jpg" alt="Imagem de post">
                 </div>
           
@@ -319,12 +321,13 @@
                     <div>
                         <div class="Like-interaction">
                             <ion-icon id="L3" name="heart-outline" onclick="Like(document.getElementById('L3'), document.getElementById('HL3'))"></ion-icon>
-                            <div id="HL3" class="Liked Off" onclick="Like(document.getElementById('L3'), document.getElementById('HL3'))"></div>
+                            <ion-icon onclick="Like(document.getElementById('L3'), document.getElementById('HL3'))" id="HL3" class="Off" name="heart"></ion-icon>
                         </div>
                         <ion-icon class="Chat-icon" name="chatbubble-outline"></ion-icon>
                         <ion-icon name="paper-plane-outline"></ion-icon>
                     </div>
-                    <ion-icon name="bookmark-outline"></ion-icon>
+                    <ion-icon onclick="savePost(document.getElementById('nonSaved3'), document.getElementById('saved3'))" name="bookmark-outline" id="nonSaved3"></ion-icon>
+                    <ion-icon onclick="savePost(document.getElementById('nonSaved3'), document.getElementById('saved3'))" name="bookmark" id="saved3" class="Off"></ion-icon>
                 </div>
 
                 <div class="Post-informations">
@@ -359,16 +362,16 @@
         <aside>
             <div id="Profile">
                 <div>
-                    <a href=""><img src="images/Users-img/User-photo.jpg" alt=""></a>
+                    <a href="" id="userImg"><img src="images/Users-img/User-photo.jpg" alt=""></a>
                     <div>
                         <a href="">
                             <p>Guicintra27</p>
                         </a>
-                        <p>Guilherme Cintra</p>
+                        <p id="userName">Guilherme Cintra</p>
                     </div>
                 </div>
 
-                <a href="">
+                <a onclick="alterUser()">
                     <p>Mudar</p>
                 </a>
             </div>
